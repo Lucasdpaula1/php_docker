@@ -1,0 +1,13 @@
+version: "3"
+services:
+  app:
+    build: .
+    ports:
+      - "100:80"
+    depends_on:
+      - email_service
+
+  email_service:
+    build: ./python # Diretório da API de e-mail em Python
+    ports:
+      - "5000:5000"

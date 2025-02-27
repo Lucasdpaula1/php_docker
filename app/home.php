@@ -1,1 +1,0 @@
-<?php echo 'serei executado primeiro que o index.php pois mudei a priopriedade dos arquivos que o apache deve servir caso seja acessado o diretoiro var/www/html ';
