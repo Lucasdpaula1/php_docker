@@ -15,7 +15,7 @@
     ],
 ];
 $context = stream_context_create($options);
-$response = file_get_contents('http://localhost:5000/send-email', false, $context);
+$response = file_get_contents('http://email_service/send-email', false, $context);
 
 
 echo $response;
