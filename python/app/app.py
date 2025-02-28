@@ -7,6 +7,7 @@ app = Flask(__name__)
 @app.route('/send-email', methods=['POST'])
 def send_email():
   data = request.json
+  print(data)
   intialization_smtp_server(message=data['context'],subject=data['subject'],recevier_email=data['to'])
   return jsonify(f"<h1> envio de email para o {data['to']}</h1>")
 
