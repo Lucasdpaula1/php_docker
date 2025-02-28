@@ -15,7 +15,9 @@
     ],
 ];
 $context = stream_context_create($options);
-$response = file_get_contents('http://email_service:5000/send-email', false, $context);
+$hostname = 'email_service';
+$port = 5000;
+$response = file_get_contents("http://$hostname:$port/send-email", false, $context);
 
 
 echo $response;

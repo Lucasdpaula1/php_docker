@@ -18,7 +18,7 @@ function callApi(){
     <h1>Envio de Email integrado com o container do Python</h1>
       <div  class="div-1">
         <label for="to">Email do Destinatário</label>
-        <input name= to type="text" id="meu_input " value="<?='exemplo@.com.br'?>">
+        <input name="to" type="text" id="meu_input " value="<?='exemplo@.com.br'?>">
       </div>
       <div class="div-2">
         <label for="context">Conteúdo que será enviado</label>
