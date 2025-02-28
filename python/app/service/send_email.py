@@ -21,6 +21,6 @@ def intialization_smtp_server(message,recevier_email,subject):
   msg.attach(MIMEText(body,'html'))
   smpt_server = os.getenv('SMPT_SERVER','smtp.gmail.com'),
   port_server = os.getenv('PORT',465)
-  with smtplib.SMTP_SSL(smpt_server,465,context=context) as server:
+  with smtplib.SMTP_SSL('smtp.gmail.com',465,context=context) as server:
     server.login(email_address_host,email_password_host)
     server.sendmail(email_password_host,recevier_email,msg.as_string())
